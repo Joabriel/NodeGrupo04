@@ -42,6 +42,11 @@ const productoSchema = new mongoose.Schema({
     estadoActivo: {
         type: Boolean,
         default: true
+    },
+    proveedor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Proveedor',
+        required: [true, 'El producto debe pertenecer a un proveedor']
     }
 }, {
     timestamps: true

@@ -10,9 +10,9 @@ connectDB();
 
 app.use(express.json());
 
-// Routes will be imported here
-// const exampleRoutes = require('./routes/example.routes');
-// app.use('/api/example', exampleRoutes);
+// Rutas
+const productoRoutes = require('./src/routes/producto.routes');
+app.use('/api/productos', productoRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
