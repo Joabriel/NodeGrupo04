@@ -12,7 +12,9 @@ app.use(express.json());
 
 // Rutas
 const productoRoutes = require('./src/routes/producto.routes');
+const proveedorRoutes = require('./src/routes/proveedor.routes');
 app.use('/api/productos', productoRoutes);
+app.use('/api/proveedores', proveedorRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
